@@ -1,0 +1,17 @@
+oracle.install.responseFileVersion=/oracle/install/rspfmt_dbinstall_response_schema_v18.0.0
+oracle.install.option=INSTALL_DB_SWONLY
+UNIX_GROUP_NAME=oinstall
+INVENTORY_LOCATION=###ORACLE_ROOT###/app/oraInventory
+SELECTED_LANGUAGES=en
+ORACLE_BASE=###ORACLE_BASE###
+ORACLE_HOME=###ORACLE_HOME###
+oracle.install.db.InstallEdition=###ORACLE_EDITION###
+oracle.install.db.OPER_GROUP=osoper
+oracle.install.db.DBA_GROUP=osdba
+oracle.install.db.BACKUPDBA_GROUP=osbackupdba
+oracle.install.db.DGDBA_GROUP=osdgdba
+oracle.install.db.KMDBA_GROUP=oskmdba
+oracle.install.db.OSRACDBA_GROUP=osracdba
+SECURITY_UPDATES_VIA_MYORACLESUPPORT=false
+DECLINE_SECURITY_UPDATES=true
+oracle.installer.autoupdates.option=SKIP_UPDATES

@@ -1,0 +1,12 @@
+Be_Etc="###ORACLE_BASE###/etc"
+Install_Dir="###ORACLE_LOCAL###"
+Install_Profile="R"
+Names_Default_Domain="###DEFAULT_DOMAIN###"
+Oracle_Base="###ORACLE_BASE###"
+Oracle_Home="###ORACLE_HOME###"
+Perl_binary="/usr/bin/perl"
+Tns_Admin="###TNS_ADMIN###"
+Use_Oracleperl="YES"
+Use_Tvdperl="NO"
+config_oinstall="YES"
+Config_Tns=0

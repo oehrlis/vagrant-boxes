@@ -1,0 +1,16 @@
+# ignore binary packages and files
+**/*.rpm
+**/*.jar
+**/*.zip
+**/*.tar.gz
+**/*.tgz
+
+# ignore build stuff
+
+# ignore mac OS resource forks
+**/*.DS_Store
+
+# ignore some runtime files
+**/*base_install.rsp
+**/*/.vagrant/
+/.project
