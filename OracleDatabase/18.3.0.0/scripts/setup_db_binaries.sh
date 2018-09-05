@@ -44,13 +44,13 @@ export ORACLE_HOME=${ORACLE_BASE}/product/${ORACLE_HOME_NAME}
 echo " - Install Oracle DB binaries -----------------------------------------"
 if [ -s "${ORACLE_PACKAGE}" ]; then
     mkdir -p ${ORACLE_HOME}
-    chown oracle:oinstall -R ${ORACLE_ROOT}/app
     unzip -o ${ORACLE_PACKAGE} -d ${ORACLE_HOME}/
     cp ${VAGRANT_RESPONSE}/db_install.rsp.tpl ${VAGRANT_RESPONSE}/db_install.rsp
     sed -i -e "s|###ORACLE_ROOT###|$ORACLE_ROOT|g" ${VAGRANT_RESPONSE}/db_install.rsp
     sed -i -e "s|###ORACLE_BASE###|$ORACLE_BASE|g" ${VAGRANT_RESPONSE}/db_install.rsp
     sed -i -e "s|###ORACLE_HOME###|$ORACLE_HOME|g" ${VAGRANT_RESPONSE}/db_install.rsp
     sed -i -e "s|###ORACLE_EDITION###|$ORACLE_EDITION|g" ${VAGRANT_RESPONSE}/db_install.rsp
+    chown oracle:oinstall -R ${ORACLE_ROOT}/app
 
     su -l oracle -c "yes | $ORACLE_HOME/runInstaller -silent -ignorePrereqFailure -waitforcompletion -responseFile ${VAGRANT_RESPONSE}/db_install.rsp"
     ${ORACLE_ROOT}/app/oraInventory/orainstRoot.sh

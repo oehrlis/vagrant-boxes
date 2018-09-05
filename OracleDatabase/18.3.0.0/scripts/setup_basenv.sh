@@ -53,7 +53,7 @@ if [ -s "${BASENV_PACKAGE}" ]; then
     sed -i -e "s|###DEFAULT_DOMAIN###|${DEFAULT_DOMAIN}|g" ${VAGRANT_RESPONSE}/base_install.rsp
 
     # create softlink for oratab
-    mv -rf /etc/oratab ${ORACLE_BASE}/etc/oratab
+    mv -f /etc/oratab ${ORACLE_BASE}/etc/oratab
     touch ${ORACLE_BASE}/etc/oratab
     ln -sf ${ORACLE_BASE}/etc/oratab /etc/oratab
     

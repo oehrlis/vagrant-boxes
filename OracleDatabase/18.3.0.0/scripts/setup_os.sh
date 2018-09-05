@@ -73,6 +73,7 @@ useradd --create-home --gid oinstall --groups osdba,osoper,osbackupdba,osdgdba,o
 # Install Oracle Database prereq and openssl packages
 echo " - Install Oracle Database prereq packages..."
 yum install -y oracle-database-preinstall-18c openssl perl perl-core
+yum install -y dejavu-sans-fonts dejavu-fonts-common dejavu-serif-fonts dejavu-sans-mono-fonts ghostscript-fonts
 
 # TODO: create oracle vg
 echo " - Create Oracle directories:"
@@ -82,7 +83,8 @@ install --owner oracle --group oinstall --mode=775 --verbose --directory \
     ${ORACLE_BASE}/product \
     ${ORACLE_LOCAL} \
     ${ORACLE_ROOT}/oradata \
-    ${ORACLE_DATA}/oradata
+    ${ORACLE_DATA}/oradata \
+    ${ORACLE_DATA}/fast_recovery_area
 
 echo " - Finished setup OS --------------------------------------------------"
 # --- EOF -------------------------------------------------------------------
